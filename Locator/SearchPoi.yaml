@@ -1,0 +1,18 @@
+poi_button:
+ type:xpath
+ value:"//header/div/div/span"
+search:
+ type:xpath
+ value:"//form/input"
+address:
+ type:xpath
+ value:"//section[1]/div[1]/p[1]"
+poi:
+ type:xpath
+ value:"//header/div/div/span"
+search_link:
+ type:xpath
+ value:"html/body/div[1]/div[2]/header/a/input"
+search_restaurant:
+ type:xpath
+ value:"html/body/div[1]/div/form/input"

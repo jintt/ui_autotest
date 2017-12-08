@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<common>
+	</common>
+	<testLogin>
+		<username>jintt@qq.com</username>
+		<password>123123</password>
+	</testLogin>
+	<testLogin>
+		<username>jintt2@qq.com</username>
+		<password>123123</password>
+	</testLogin>
+
+</data>

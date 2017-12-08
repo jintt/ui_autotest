@@ -1,0 +1,6 @@
+add_food:
+ type:xpath
+ value:"//dl[@role='menu']/dd[1]/div/section/div[2]/span/span/a[2]"
+checkout_button:
+  type:xpath
+  value:"//footer/div[3]/a"
