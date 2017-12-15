@@ -91,7 +91,7 @@ public class TestBase {
 		Reporter.log("<a href=" + path + " target='_blank' >" +
 				this.getFileName(nameScreenshot) + "</a>");
 
-		Reporter.log("<img src=" + path  + "</img>");
+		Reporter.log("<img src=" + path  + ">");
 		Reporter.log("<img src=/opensite/test-output/" + path + ">");
 	}
 
