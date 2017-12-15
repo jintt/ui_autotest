@@ -91,8 +91,8 @@ public class TestBase {
 		Reporter.log("<a href=" + path + " target='_blank' >" +
 				this.getFileName(nameScreenshot) + "</a>");
 
-		Reporter.log("<img src=" + path  + ">");
-		Reporter.log("<img src=/opensite/test-output/" + path + ">");
+		Reporter.log("<img style='width:160px' src=" + path  + ">");
+//		Reporter.log("<img style='width:160px' src=/opensite/test-output/" + path + ">");
 	}
 
 	private String getFileName(String nameTest) throws IOException {
