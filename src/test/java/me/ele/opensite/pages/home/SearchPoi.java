@@ -60,7 +60,14 @@ public class SearchPoi extends TestBase {
         locator.getElement("search").sendKeys(Keys.ENTER);
         sleep(2000);
 
-		locator.getElement("address").click();
+        try {
+            takeScreenShoot("定位：" + param.get("keywords") );
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        locator.getElement("address").click();
 
         sleep(2000);
 
