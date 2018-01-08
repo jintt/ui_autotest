@@ -22,8 +22,8 @@ public class SeleniumDriver {
 		else if("chrome".equals(Config.browser)) {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--user-agent=iphone");
-			options.addArguments("--user-data-dir=/Users/jintingting/Library/Application Support/Google/Chrome/Default");
-			System.setProperty("webdriver.chrome.driver","src/test/resources/drivers/chromedriver");
+			//options.addArguments("--user-data-dir=/Users/jintingting/Library/Application Support/Google/Chrome/Default");
+			//System.setProperty("webdriver.chrome.driver","src/test/resources/drivers/chromedriver");
 			driver = new ChromeDriver(options);
 		}
 		else {

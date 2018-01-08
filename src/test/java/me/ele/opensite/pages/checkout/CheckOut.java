@@ -42,9 +42,7 @@ public class CheckOut extends TestBase {
 
     @Test(dataProvider = "providerMethod")
     public void testCheckOut(Map<String, String> param) throws Exception {
-//        driver.navigate().to(param.get("baseurl"));
         driver.navigate().to(param.get("url"));
-
 
         SearchPoi searchPoi = new SearchPoi(SearchPoi);
         searchPoi.testPoi(param);
@@ -55,7 +53,6 @@ public class CheckOut extends TestBase {
         RestaurantDetail restaurantDetail = new RestaurantDetail(RestaurantDetail);
         restaurantDetail.addFood(param);
         restaurantDetail.checkout(param);
-
 
     }
 
