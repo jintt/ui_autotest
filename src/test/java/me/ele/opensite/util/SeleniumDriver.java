@@ -23,6 +23,9 @@ public class SeleniumDriver {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--user-agent=iphone");
 			options.addArguments("--headless");
+			options.addArguments("--window-size=400,800");
+			options.addArguments("--disable-gpu");
+
 			//options.addArguments("--user-data-dir=/Users/jintingting/Library/Application Support/Google/Chrome/Default");
 			//System.setProperty("webdriver.chrome.driver","src/test/resources/drivers/chromedriver");
 			driver = new ChromeDriver(options);
