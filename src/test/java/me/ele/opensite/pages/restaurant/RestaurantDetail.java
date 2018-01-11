@@ -17,7 +17,6 @@ import static java.lang.Thread.sleep;
  * Created by jintingting on 2017/11/1.
  */
 public class RestaurantDetail extends TestBase{
-    private WebDriver driver;
 
     private Locator locator;
 
@@ -29,6 +28,7 @@ public class RestaurantDetail extends TestBase{
     public RestaurantDetail(Locator locator) {
         super();
         this.locator = locator;
+        this.driver = locator.getDriver();
     }
 
     @BeforeMethod

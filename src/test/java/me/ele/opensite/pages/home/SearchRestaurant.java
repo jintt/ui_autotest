@@ -18,8 +18,6 @@ import static java.lang.Thread.sleep;
  */
 public class SearchRestaurant  extends TestBase {
 
-    private WebDriver driver;
-
     private Locator locator;
 
     public SearchRestaurant() {
@@ -30,6 +28,7 @@ public class SearchRestaurant  extends TestBase {
     public SearchRestaurant(Locator locator) {
         super();
         this.locator = locator;
+        this.driver = locator.getDriver();
 
     }
 
@@ -44,23 +43,21 @@ public class SearchRestaurant  extends TestBase {
 
 
     @Test(dataProvider = "providerMethod")
-    public void testSearch(Map<String, String> param) throws InterruptedException {
+    public void testSearch(Map<String, String> param) throws Exception {
 
         locator.getElement("search-wrapper").click();
 
         locator.getElement("search-section").sendKeys(param.get("shopName"));
 
         locator.getElement("search-button").click();
+        takeScreenShoot("搜索店铺：" + param.get("shopName"));
 
         locator.getElement("shopitem").click();
         Log.logInfo("搜索进入店铺：" + param.get("shopName"));
 
         sleep(2000);
-        try {
-            takeScreenShoot("进入" + param.get("shopName") + "店铺");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+        takeScreenShoot("进入" + param.get("shopName") + "店铺");
 
     }
 

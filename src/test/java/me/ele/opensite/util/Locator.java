@@ -145,6 +145,8 @@ public class Locator {
 			else {
 				element = driver.findElement(by);
 			}
+			Log.logInfo("element: " + key);
+
 		}
 		else {
 			Log.logError(key + "is not exist in " + yamlfile +".yaml");
