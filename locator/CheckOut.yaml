@@ -16,3 +16,9 @@ search_link:
 search_restaurant:
  type:xpath
  value:"html/body/div[1]/div/form/input"
+submitbtn:
+ type:xpath
+ value:"//footer/button"
+paybtn:
+ type:xpath
+ value:"//button[contains(text(),'支付')]"

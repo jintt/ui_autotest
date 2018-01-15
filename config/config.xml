@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
 	<browser>chrome</browser>
-	<waitTime>100</waitTime>
+	<waitTime>40</waitTime>
 </config>

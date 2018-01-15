@@ -83,10 +83,14 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.5</version>
                 <configuration>
+                    <systemPropertyVariables>
+                        <testEnv>${testEnv}</testEnv>
+                    </systemPropertyVariables>
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
                         <file>test-suite/testNG.xml</file>
                     </suiteXmlFiles>
+
                     <!--<workingDirectory>target/</workingDirectory>-->
                 </configuration>
             </plugin>

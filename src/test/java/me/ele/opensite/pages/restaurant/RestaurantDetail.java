@@ -1,9 +1,6 @@
 package me.ele.opensite.pages.restaurant;
 
-import me.ele.opensite.util.Locator;
-import me.ele.opensite.util.Log;
-import me.ele.opensite.util.SeleniumDriver;
-import me.ele.opensite.util.TestBase;
+import me.ele.opensite.util.*;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -44,14 +41,33 @@ public class RestaurantDetail extends TestBase{
     @Test(dataProvider = "providerMethod")
     public void addFood(Map<String, String> param) throws InterruptedException {
 
-        locator.getElement("add_food").click();
+        if(locator.getElement("add_food_first") != null) {
+            locator.getElement("add_food_first").click();
+        }
+        else {
+            locator.getElement("add_food").click();
+        }
         sleep(2000);
         Log.logInfo("添加食物");
+
         try {
             takeScreenShoot("加购餐品");
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+    }
+
+    public void addSpecFood(Map<String, String> param) throws Exception {
+
+        locator.getElement("add_food_spec").click();
+        takeScreenShoot("选择多规格餐品");
+        locator.getElement("add_food_spec_ok").click();
+
+        sleep(2000);
+        Log.logInfo("添加多规格餐品");
+
+        takeScreenShoot("添加多规格餐品");
 
     }
 

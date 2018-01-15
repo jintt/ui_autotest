@@ -2,6 +2,7 @@ package me.ele.opensite.util;
 
 import org.ho.yaml.Yaml;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -81,7 +82,7 @@ public class Locator {
 				}
 			});
 		} catch (Exception e) {
-			Log.logError(by.toString() + "is not exist until " + waitTime);
+			Log.logError(by.toString() + "is not exist until " + waitTime + " seconds.");
 		}
 		
 		return element;
@@ -98,7 +99,7 @@ public class Locator {
 					}
 				});
 			} catch (Exception e) {
-				Log.logError(element.toString() + "is not displayed");
+				Log.logError(element.toString() + " is not displayed");
 			}			
 		
 		}
@@ -145,7 +146,7 @@ public class Locator {
 			else {
 				element = driver.findElement(by);
 			}
-			Log.logInfo("element: " + key);
+			Log.logInfo("get element: " + key);
 
 		}
 		else {
@@ -176,5 +177,11 @@ public class Locator {
 
 	public WebDriver getDriver() {
 		return driver;
+	}
+
+	//self.driver.execute_script("document.getElementById('login_credit').value='12345'")
+	public void executeScript(String s) {
+		((JavascriptExecutor)driver).executeScript(s);
+
 	}
 }

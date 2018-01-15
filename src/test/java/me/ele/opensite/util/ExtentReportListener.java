@@ -152,7 +152,7 @@ public class ExtentReportListener  implements IReporter {
             treeSet.addAll(tests.getAllResults());
             for (ITestResult result : treeSet) {
                 Object[] parameters = result.getParameters();
-                String name="测试数据：";
+                String name = "用例名：" + result.getMethod().getMethodName() + "   -> 测试数据：";
                 //如果有参数，则使用参数的toString组合代替报告中的name
                 for(Object param:parameters){
                     name += param.toString() ;

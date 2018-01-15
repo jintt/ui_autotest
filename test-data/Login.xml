@@ -2,13 +2,9 @@
 <data>
 	<common>
 	</common>
-	<testLogin>
-		<username>jintt@qq.com</username>
-		<password>123123</password>
-	</testLogin>
-	<testLogin>
-		<username>jintt2@qq.com</username>
-		<password>123123</password>
-	</testLogin>
+	<loginWithPwd>
+		<username>18621702945</username>
+		<password>eleme551177</password>
+	</loginWithPwd>
 
 </data>

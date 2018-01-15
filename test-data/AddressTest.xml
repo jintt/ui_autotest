@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<common>
+	</common>
+	<testAddAddress>
+		<name>000auto</name>
+		<phone>18621702945</phone>
+		<address>近铁城市广场</address>
+	</testAddAddress>
+	<testModifyAddress>
+	</testModifyAddress>
+	<testDeleteAddress>
+	</testDeleteAddress>
+
+
+</data>

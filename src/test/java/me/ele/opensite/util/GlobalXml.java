@@ -3,11 +3,15 @@ package me.ele.opensite.util;
 import java.util.Map;
 
 public class GlobalXml {
-	public static Map<String, String> global;
+	public  Map<String, String> global;
 	
-	static {
+	public GlobalXml(String environment) {
 		ParseXml px = new ParseXml("test-data/global.xml");
-		global = px.getChildrenInfoByElement(px.getElementObject("/*"));
+		global = px.getChildrenInfoByElement(px.getElementObject("data/"+ environment));
+	}
+
+	public  Map<String, String> getGlobal(){
+		return global;
 	}
 
 }

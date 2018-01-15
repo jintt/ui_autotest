@@ -8,9 +8,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.Augmenter;
 import org.testng.Reporter;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,20 +26,30 @@ public class TestBase {
 	private Map<String, String> commonMap;
 
 	public WebDriver driver;
+	public String environment;
+
+	@BeforeClass
+	@Parameters("testEnv")
+	public void setup(String testEnv)
+	{
+		System.out.println("=======env=======" + testEnv);
+		environment = testEnv;
+	}
+
 
 	@DataProvider
 	public Object[][] providerMethod(Method method) {
 		this.initPx();
 		this.initCommonMap();
-
 		String methodName = method.getName();
 		List<Element> elements = px.getElementObjects("/*/" + methodName);
 		Object[][] object = new Object[elements.size()][];
+		GlobalXml globalXml = new GlobalXml(environment);
 		for (int i = 0; i<elements.size(); i++) {
 //			Object[] temp = new Object[]{px.getChildrenInfoByElement(elements.get(i))};
 //			Object[] temp = new Object[]{this.getMergeMapData(px.getChildrenInfoByElement(elements.get(i)), commonMap)};
 			Map<String, String> mergeCommon = this.getMergeMapData(px.getChildrenInfoByElement(elements.get(i)), commonMap);
-			Map<String, String> mergeGlobal = this.getMergeMapData(mergeCommon, GlobalXml.global);
+			Map<String, String> mergeGlobal = this.getMergeMapData(mergeCommon, globalXml.getGlobal());
 
 			object[i] = new Object[]{mergeGlobal};
 		}

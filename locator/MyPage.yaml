@@ -1,0 +1,49 @@
+我的:
+ type:xpath
+ value:"//span[contains(text(),'我的')]"
+登陆:
+ type:xpath
+ value:"//p[contains(text(),'登录/注册')]"
+我的地址:
+ type:xpath
+ value:"//div[contains(text(),'我的地址')]"
+新增收货地址:
+ type:xpath
+ value:"//div[contains(text(),'新增收货地址')]"
+姓名:
+ type:xpath
+ value:"//input[@placeholder='你的姓名']"
+手机号:
+ type:xpath
+ value:"//input[@placeholder='你的手机号']"
+位置:
+ type:xpath
+ value:"//input[@placeholder='小区/写字楼/学校等']"
+输入位置:
+ type:xpath
+ value:"//input[@placeholder='请输入小区/写字楼/学校等']"
+搜索:
+ type:xpath
+ value:"//button[contains(text(),'搜索')]"
+选择地址:
+ type:xpath
+ value:"//div[@class='searchlist']/div[1]"
+学校:
+ type:xpath
+ value:"//span[contains(text(),'学校')]"
+公司:
+ type:xpath
+ value:"//span[contains(text(),'公司')]"
+确定:
+ type:xpath
+ value:"//button[contains(text(),'确定')]"
+第一个地址:
+ type:xpath
+ value:"(//div[@class='addresscard-edit'])[1]"
+第一个公司标识:
+ type:xpath
+ value:"(//div[@class='addresscard'])[1]//span[contains(text(),'公司')]"
+删除:
+ type:xpath
+ value:"//a[contains(text(),'删除')]"
+

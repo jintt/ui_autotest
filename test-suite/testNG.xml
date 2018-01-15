@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="smoke" parallel="classes" thread-count="3">
+<suite name="smoke" parallel="classes" thread-count="1">
+    <parameter name="testEnv" value="${testEnv}"/>
 
-    <test name="下单" verbose="2" preserve-order="true">
+    <test name="Checkout" verbose="2" preserve-order="true">
         <classes>
-            <class name="me.ele.opensite.pages.checkout.CheckOut" />
+            <class name="me.ele.opensite.testcases.CheckOutTest" />
         </classes>
-    </test> <!-- Test -->
-
-    <test name="demo" verbose="2" preserve-order="true">
+    </test>
+    <test name="HomePage" verbose="2" preserve-order="true">
         <classes>
-            <class name="me.ele.opensite.pages.checkout.CheckOut" />
+            <class name="me.ele.opensite.testcases.HomeTest" />
+        </classes>
+    </test>
+    <test name="RestaurantDetail" verbose="2" preserve-order="true">
+        <classes>
+            <class name="me.ele.opensite.testcases.RestaurantDetailTest" />
+        </classes>
+    </test>
+    <test name="Address" verbose="2" preserve-order="true">
+        <classes>
+            <class name="me.ele.opensite.testcases.AddressTest">
+                <methods>
+                    <include name="testAddAddress" />
+                    <include name="testModifyAddress" />
+                    <include name="testDeleteAddress" />
+                </methods>
+            </class>
         </classes>
     </test>
 
     <listeners>
         <listener class-name="me.ele.opensite.util.ExtentReportListener"></listener>
     </listeners>
-</suite> <!-- Suite -->
+</suite>

@@ -1,6 +1,15 @@
+add_food_first:
+ type:xpath
+ value:"//dl[@role='menu']/dd[1]/div/section/div[2]/span/span/a"
 add_food:
  type:xpath
  value:"//dl[@role='menu']/dd[1]/div/section/div[2]/span/span/a[2]"
 checkout_button:
   type:xpath
   value:"//footer/div[3]/a"
+add_food_spec:
+ type:xpath
+ value:"(//span[contains(text(),'选规格')])[1]"
+add_food_spec_ok:
+ type:xpath
+ value:"//button[contains(text(),'选好了')]"

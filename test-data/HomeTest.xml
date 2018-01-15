@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<common>
+	</common>
+	<testSearchPoi>
+		<keywords>上海市崇明区跃进农场</keywords>
+		<shopName>第三方小程序</shopName>
+	</testSearchPoi>
+	<testSearchPoi>
+		<keywords>天山天池风景区</keywords>
+		<shopName>openapi</shopName>
+	</testSearchPoi>
+	<testFoodEntry>
+		<entryname>美食</entryname>
+	</testFoodEntry>
+	<testFoodEntry>
+		<entryname>商超便利</entryname>
+	</testFoodEntry>
+	<testFoodEntry>
+		<entryname>果蔬生鲜</entryname>
+	</testFoodEntry>
+	<testFoodEntry>
+		<entryname>浪漫鲜花</entryname>
+	</testFoodEntry>
+	<testFoodEntry>
+		<entryname>大牌5折</entryname>
+	</testFoodEntry>
+	<testShopList>
+		<shop>列表第一家</shop>
+	</testShopList>
+
+
+</data>

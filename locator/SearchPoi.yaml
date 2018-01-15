@@ -3,7 +3,7 @@ poi_button:
  value:"//header/div/div/span"
 search:
  type:xpath
- value:"//form/input"
+ value:"//input[@type='search']"
 address:
  type:xpath
  value:"//section[1]/div[1]/p[1]"
@@ -16,3 +16,6 @@ search_link:
 search_restaurant:
  type:xpath
  value:"html/body/div[1]/div/form/input"
+美食:
+ type:xpath
+ value:"//a/span[contains(text(),'美食')]"

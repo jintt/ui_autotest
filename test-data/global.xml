@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data>
-	<!--<url>http://opensite.alpha.elenet.me/msite/</url>
-	<baseurl>http://opensite-restapi.alpha.elenet.me/api/consumer_key?source=8098351612&amp;set=true</baseurl>-->
-	<url>http://h5.ele.me/msite</url>
+	<prod>
+		<url>http://h5.ele.me/msite</url>
+		<username>18621702945</username>
+		<password>eleme551177</password>
+	</prod>
+	<review>
+		<url>http://h5-review.faas.ele.me/msite</url>
+		<username>18621702945</username>
+		<password>eleme551177</password>
+	</review>
 	<!--<baseurl>http://h5-vip.faas.ele.me/msite</baseurl>-->
 </data>

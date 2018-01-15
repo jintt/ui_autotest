@@ -1,18 +1,22 @@
-tologin_button:
+loginsms:
  type:xpath
- value:".//*[@id='logininfo']/a[1]"
-username:
- type:id
- value:txtUsername
-password:
- type:id
- value:txtPassword
-checkin_button:
- type:id
- value:btnSignCheck
-loginout_button:
- type:id
- value:logininfo
-feilei:
- type:id
- value:__FenLeiLiuLan
+ value:"//a[contains(text(),'短信登录')]"
+loginpwd:
+ type:xpath
+ value:"//a[contains(text(),'密码登录')]"
+loginpwd_username:
+ type:xpath
+ value:"//form/section[1]/input"
+loginpwd_pwd:
+ type:xpath
+ value:"//form/section[2]/input"
+loginpwd_switch:
+ type:xpath
+ value:"//form/section[2]/div"
+login_button:
+ type:xpath
+ value:"//button[contains(text(),'登录')]"
+
+
+
+

@@ -1,9 +1,0 @@
--------------------------------------------------------------------------------
-Test set: TestSuite
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 123.757 sec <<< FAILURE! - in TestSuite
-testCheckOut(me.ele.opensite.test.checkout.CheckOut)  Time elapsed: 116.48 sec  <<< FAILURE!
-java.lang.NullPointerException: null
-	at me.ele.opensite.test.home.SearchRestaurant.testSearch(SearchRestaurant.java:55)
-	at me.ele.opensite.test.checkout.CheckOut.testCheckOut(CheckOut.java:61)
-

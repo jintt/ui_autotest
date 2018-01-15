@@ -53,7 +53,7 @@ public class SearchPoi extends TestBase {
 
         locator.getElement("poi_button").click();
 
-        sleep(2000);
+        sleep(3000);
 
 		locator.getElement("search").sendKeys(param.get("keywords"));
         sleep(2000);
@@ -61,7 +61,7 @@ public class SearchPoi extends TestBase {
         sleep(2000);
 
         try {
-            takeScreenShoot("定位：" + param.get("keywords") );
+            takeScreenShoot("搜索定位：" + param.get("keywords") );
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -70,12 +70,10 @@ public class SearchPoi extends TestBase {
         locator.getElement("address").click();
 
         sleep(2000);
-
-        assert locator.getElement("poi").getText().equals(param.get("keywords"));
+        takeScreenShoot("定位：" + param.get("keywords") );
 
         Log.logInfo("定位地址：" + param.get("keywords"));
 
-        takeScreenShoot("定位" + param.get("keywords"));
 
     }
 
