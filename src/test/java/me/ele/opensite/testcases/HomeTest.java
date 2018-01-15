@@ -71,10 +71,22 @@ public class HomeTest extends TestBase {
         HomePage homePage = new HomePage(homePageLocator);
         homePage.foodEntry(param.get("entryname"));
 
-        Assert.assertTrue(
+        if (homePageLocator.findElement(By.xpath("//h1[contains(text(),'" + param.get("entryname") + "')]")) != null) {
+            Assert.assertTrue(true);
+            Assert.assertTrue(
+                    driver.findElement(By.xpath("//ul/li[1]")) != null);
+
+        }
+        else if (homePageLocator.findElement(By.xpath("//div[contains(text(),'" + param.get("entryname") + "')]")) != null) {
+            Assert.assertTrue(true);
+        }
+        else {
+            Assert.assertTrue(false);
+        }
+
+       /* Assert.assertTrue(
                 driver.findElement(By.xpath("//h1[contains(text(),'" + param.get("entryname") + "')]")) != null);
-        Assert.assertTrue(
-                        driver.findElement(By.xpath("//ul/li[1]")) != null);
+        */
 
     }
 

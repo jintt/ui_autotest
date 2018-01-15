@@ -50,6 +50,7 @@ public class SearchRestaurant  extends TestBase {
         locator.getElement("search-section").sendKeys(param.get("shopName"));
 
         locator.getElement("search-button").click();
+        sleep(2000);
         takeScreenShoot("搜索店铺：" + param.get("shopName"));
 
         locator.getElement("shopitem").click();

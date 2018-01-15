@@ -68,8 +68,11 @@ public class Locator {
 	public WebElement getElementNoWait(String key, String[] replace) {
 		return this.getLocator(key, replace, false);
 	}
-	
-	
+
+	public WebElement findElement(By by) {
+		return this.waitForElement(by);
+	}
+
 	private WebElement waitForElement(final By by) {
 		WebElement element = null;
 		int waitTime = Config.waitTime;
