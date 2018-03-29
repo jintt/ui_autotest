@@ -17,6 +17,8 @@ public class MyPage  extends TestBase {
     private Locator locator;
     private Locator loginLocator;
 
+    Login login;
+
     public MyPage() {
         super();
 
@@ -28,6 +30,7 @@ public class MyPage  extends TestBase {
         this.driver = locator.getDriver();
 
         loginLocator = new Locator(driver, "Login");
+        login = new Login(loginLocator);
     }
 
     public void elementClick(String name) throws Exception {
@@ -41,13 +44,21 @@ public class MyPage  extends TestBase {
         if(locator.getElement("登陆") != null) {
             locator.getElement("登陆").click();
             takeScreenShoot("进入登陆页");
-            Login login = new Login(loginLocator);
             login.loginWithPwd(param);
         }
         else {
 
         }
 
+    }
+
+    public void logout(Map<String, String> param) throws Exception {
+        if(locator.getElement("登陆用户") != null) {
+            locator.getElement("登陆用户").click();
+            sleep(2000);
+            takeScreenShoot("登陆用户");
+        }
+        login.logout(param);
     }
 
     public void addAddress(Map<String, String> param) throws Exception {

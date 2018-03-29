@@ -1,22 +1,14 @@
 package me.ele.opensite.testcases;
 
-import me.ele.opensite.pages.home.SearchPoi;
-import me.ele.opensite.pages.home.SearchRestaurant;
 import me.ele.opensite.pages.mypage.MyPage;
 import me.ele.opensite.util.Locator;
-import me.ele.opensite.util.Log;
 import me.ele.opensite.util.SeleniumDriver;
 import me.ele.opensite.util.TestBase;
-import org.junit.AfterClass;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.List;
 import java.util.Map;
 
 import static java.lang.Thread.sleep;
@@ -25,6 +17,7 @@ import static java.lang.Thread.sleep;
  * Created by jintingting on 2018/1/31.
  */
 public class AddressTest extends TestBase {
+
     private Locator myPageLocator;
 
     private MyPage myPage;

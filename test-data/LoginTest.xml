@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<common>
+	</common>
+	<testPasswordLogin>
+		<username>18621702945</username>
+		<password>eleme551177</password>
+	</testPasswordLogin>
+
+	<testWrongPasswordLogin>
+		<username>18621702945</username>
+		<password>eleme5511</password>
+	</testWrongPasswordLogin>
+
+	<testShowPassword>
+		<username>18621702945</username>
+		<password>eleme5511</password>
+	</testShowPassword>
+
+	<testLogout>
+		<username>18621702945</username>
+		<password>eleme551177</password>
+	</testLogout>
+
+
+
+</data>

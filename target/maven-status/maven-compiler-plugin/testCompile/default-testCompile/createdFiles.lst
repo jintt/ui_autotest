@@ -9,13 +9,12 @@ me/ele/opensite/util/Locator$3.class
 me/ele/opensite/testcases/AddressTest.class
 me/ele/opensite/util/Locator$1.class
 me/ele/opensite/util/TestngListener.class
+me/ele/opensite/testcases/mypage/LoginTest.class
 me/ele/opensite/pages/restaurant/RestaurantDetail.class
 me/ele/opensite/util/ExtentReportListener.class
 me/ele/opensite/util/ScreenShot.class
-me/ele/opensite/pages/home/SearchRestaurant.class
 me/ele/opensite/testcases/RestaurantDetailTest.class
 me/ele/opensite/testcases/HomeTest.class
-me/ele/opensite/pages/home/SearchPoi.class
 me/ele/opensite/testcases/CheckOutTest.class
 me/ele/opensite/util/Config.class
 me/ele/opensite/util/SeleniumDriver.class

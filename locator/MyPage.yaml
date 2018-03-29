@@ -46,4 +46,7 @@
 删除:
  type:xpath
  value:"//a[contains(text(),'删除')]"
+登陆用户:
+ type:xpath
+ value:"//section[1]/div/div"
 

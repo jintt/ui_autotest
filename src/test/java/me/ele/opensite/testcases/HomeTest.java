@@ -1,11 +1,6 @@
 package me.ele.opensite.testcases;
 
-import me.ele.opensite.pages.Login;
-import me.ele.opensite.pages.checkout.CheckOut;
 import me.ele.opensite.pages.home.HomePage;
-import me.ele.opensite.pages.home.SearchPoi;
-import me.ele.opensite.pages.home.SearchRestaurant;
-import me.ele.opensite.pages.restaurant.RestaurantDetail;
 import me.ele.opensite.util.Locator;
 import me.ele.opensite.util.SeleniumDriver;
 import me.ele.opensite.util.TestBase;
@@ -25,11 +20,9 @@ import static java.lang.Thread.sleep;
 public class HomeTest extends TestBase {
 
     //private WebDriver driver;
-    private Locator SearchPoi;
-    private Locator SearchRestaurant;
+
     private Locator homePageLocator;
-    private Locator Login;
-    private Locator checkOutLocator;
+    private HomePage homePage;
 
     public HomeTest() {
         super();
@@ -41,11 +34,8 @@ public class HomeTest extends TestBase {
         SeleniumDriver sd = new SeleniumDriver();
         driver = sd.getDriver();
 
-        SearchRestaurant = new Locator(driver, "SearchRestaurant");
-        SearchPoi = new Locator(driver, "SearchPoi");
         homePageLocator = new Locator(driver, "HomePage");
-        Login = new Locator(driver, "Login");
-        checkOutLocator = new Locator(driver, "Login");
+        homePage = new HomePage(homePageLocator);
 
     }
 
@@ -54,11 +44,9 @@ public class HomeTest extends TestBase {
     public void testSearchPoi(Map<String, String> param) throws Exception {
         driver.navigate().to(param.get("url"));
         sleep(2000);
-        SearchPoi searchPoi = new SearchPoi(SearchPoi);
-        searchPoi.testPoi(param);
 
-        SearchRestaurant searchRestaurant = new SearchRestaurant(SearchRestaurant);
-        searchRestaurant.testSearch(param);
+        homePage.testPoi(param);
+        homePage.testSearch(param);
 
     }
 
@@ -68,7 +56,6 @@ public class HomeTest extends TestBase {
         sleep(2000);
         takeScreenShoot("进入首页");
 
-        HomePage homePage = new HomePage(homePageLocator);
         homePage.foodEntry(param.get("entryname"));
 
         if (homePageLocator.findElement(By.xpath("//h1[contains(text(),'" + param.get("entryname") + "')]")) != null) {
@@ -95,8 +82,21 @@ public class HomeTest extends TestBase {
         driver.navigate().to(param.get("url"));
         sleep(2000);
         takeScreenShoot("进入首页");
-        HomePage homePage = new HomePage(homePageLocator);
+
         homePage.entryShop("第一家店铺");
+
+        Assert.assertTrue(
+                driver.findElement(By.xpath("//dl[@role='menu']/dd[1]")) != null);
+
+    }
+
+    @Test(dataProvider = "providerMethod")
+    public void testSearchRestaurant(Map<String, String> param) throws Exception {
+        driver.navigate().to(param.get("url"));
+        sleep(2000);
+        takeScreenShoot("进入首页");
+
+        homePage.testSearch(param);
 
         Assert.assertTrue(
                 driver.findElement(By.xpath("//dl[@role='menu']/dd[1]")) != null);

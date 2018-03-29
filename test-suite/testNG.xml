@@ -30,6 +30,12 @@
         </classes>
     </test>
 
+    <test name="登陆模块" verbose="2" preserve-order="true">
+        <classes>
+            <class name="me.ele.opensite.testcases.mypage.LoginTest" />
+        </classes>
+    </test>
+
     <listeners>
         <listener class-name="me.ele.opensite.util.ExtentReportListener"></listener>
     </listeners>

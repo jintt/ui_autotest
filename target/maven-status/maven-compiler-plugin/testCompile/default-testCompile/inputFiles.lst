@@ -1,4 +1,5 @@
 /Users/jintingting/opensite/OpensiteFunc/src/test/java/me/ele/opensite/testcases/RestaurantDetailTest.java
+/Users/jintingting/opensite/OpensiteFunc/src/test/java/me/ele/opensite/testcases/mypage/LoginTest.java
 /Users/jintingting/opensite/OpensiteFunc/src/test/java/me/ele/opensite/pages/checkout/CheckOut.java
 /Users/jintingting/opensite/OpensiteFunc/src/test/java/me/ele/opensite/testcases/CheckOutTest.java
 /Users/jintingting/opensite/OpensiteFunc/src/test/java/me/ele/opensite/util/ExtentManager.java
@@ -8,8 +9,6 @@
 /Users/jintingting/opensite/OpensiteFunc/src/test/java/me/ele/opensite/util/ParseXml.java
 /Users/jintingting/opensite/OpensiteFunc/src/test/java/me/ele/opensite/util/Locator.java
 /Users/jintingting/opensite/OpensiteFunc/src/test/java/me/ele/opensite/testcases/HomeTest.java
-/Users/jintingting/opensite/OpensiteFunc/src/test/java/me/ele/opensite/pages/home/SearchRestaurant.java
-/Users/jintingting/opensite/OpensiteFunc/src/test/java/me/ele/opensite/pages/home/SearchPoi.java
 /Users/jintingting/opensite/OpensiteFunc/src/test/java/me/ele/opensite/pages/Login.java
 /Users/jintingting/opensite/OpensiteFunc/src/test/java/me/ele/opensite/util/Log.java
 /Users/jintingting/opensite/OpensiteFunc/src/test/java/me/ele/opensite/util/SeleniumDriver.java

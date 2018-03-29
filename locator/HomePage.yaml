@@ -34,3 +34,15 @@ search_restaurant:
 第一家店铺:
  type:xpath
  value:"//section[@class='shoplist']/section[1]"
+search-wrapper:
+ type:xpath
+ value:"//div[@class='search-wrapper']/div[1]"
+search-section:
+ type:xpath
+ value:"//section/form/input"
+search-button:
+ type:xpath
+ value:"//section/form/button"
+shopitem:
+ type:xpath
+ value:"//div[1]/div/div[2]/div[2]/div[1]/div/section/div[1]"

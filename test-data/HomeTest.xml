@@ -3,13 +3,14 @@
 	<common>
 	</common>
 	<testSearchPoi>
-		<keywords>上海市崇明区跃进农场</keywords>
+		<keywords>上海市崇明区跃进农场第一</keywords>
 		<shopName>第三方小程序</shopName>
 	</testSearchPoi>
 	<testSearchPoi>
 		<keywords>天山天池风景区</keywords>
 		<shopName>openapi</shopName>
 	</testSearchPoi>
+
 	<testFoodEntry>
 		<entryname>美食</entryname>
 	</testFoodEntry>
@@ -28,6 +29,12 @@
 	<testShopList>
 		<shop>列表第一家</shop>
 	</testShopList>
+
+	<testSearchRestaurant>
+		<keywords>上海市崇明区跃进农场</keywords>
+		<shopName>第三方小程序</shopName>
+	</testSearchRestaurant>
+
 
 
 </data>

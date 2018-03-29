@@ -16,6 +16,9 @@ loginpwd_switch:
 login_button:
  type:xpath
  value:"//button[contains(text(),'登录')]"
+退出登陆:
+ type:xpath
+ value:"//button[contains(text(),'退出登录')]"
 
 
 

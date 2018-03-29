@@ -1,8 +1,7 @@
 package me.ele.opensite.testcases;
 
 import me.ele.opensite.pages.Login;
-import me.ele.opensite.pages.home.SearchPoi;
-import me.ele.opensite.pages.home.SearchRestaurant;
+import me.ele.opensite.pages.home.HomePage;
 import me.ele.opensite.pages.restaurant.RestaurantDetail;
 import me.ele.opensite.util.Locator;
 import me.ele.opensite.util.SeleniumDriver;
@@ -20,10 +19,9 @@ import java.util.Map;
 public class CheckOutTest extends TestBase {
 
     //private WebDriver driver;
-    private Locator SearchPoi;
-    private Locator SearchRestaurant;
-    private Locator RestaurantDetail;
-    private Locator Login;
+    private Locator homePageLocator;
+    private Locator restaurantDetailLocator;
+    private Locator loginLocator;
     private Locator checkOutLocator;
 
     public CheckOutTest() {
@@ -36,10 +34,9 @@ public class CheckOutTest extends TestBase {
         SeleniumDriver sd = new SeleniumDriver();
         driver = sd.getDriver();
 
-        SearchRestaurant = new Locator(driver, "SearchRestaurant");
-        SearchPoi = new Locator(driver, "SearchPoi");
-        RestaurantDetail = new Locator(driver, "RestaurantDetail");
-        Login = new Locator(driver, "Login");
+        homePageLocator = new Locator(driver, "HomePage");
+        restaurantDetailLocator = new Locator(driver, "RestaurantDetail");
+        loginLocator = new Locator(driver, "Login");
         checkOutLocator = new Locator(driver, "CheckOut");
 
     }
@@ -49,17 +46,15 @@ public class CheckOutTest extends TestBase {
     public void testCheckOut(Map<String, String> param) throws Exception {
         driver.navigate().to(param.get("url"));
 
-        SearchPoi searchPoi = new SearchPoi(SearchPoi);
-        searchPoi.testPoi(param);
+        HomePage homePage = new HomePage(homePageLocator);
+        homePage.testPoi(param);
+        homePage.testSearch(param);
 
-        SearchRestaurant searchRestaurant = new SearchRestaurant(SearchRestaurant);
-        searchRestaurant.testSearch(param);
-
-        RestaurantDetail restaurantDetail = new RestaurantDetail(RestaurantDetail);
+        RestaurantDetail restaurantDetail = new RestaurantDetail(restaurantDetailLocator);
         restaurantDetail.addFood(param);
         restaurantDetail.checkout(param);
 
-        Login login = new Login(Login);
+        Login login = new Login(loginLocator);
         login.loginWithPwd(param);
 
         CheckOut checkOut = new CheckOut(checkOutLocator);
